@@ -4,7 +4,6 @@ const Crypto = require('../models/cryptoModel')
 
 //GET ALL crypto
 //@route GET /api/routes
-//@access Private
 const getCryptos = asyncHandler(async (req, res) => {
     const cryptos = await Crypto.find()
     res.status(200).json(cryptos)
@@ -12,35 +11,62 @@ const getCryptos = asyncHandler(async (req, res) => {
 
 //GET crypto
 //@route GET /api/routes/:id
-//@access Private
 const getCrypto = asyncHandler(async (req, res) => {
-    res.status(200).json({message: `Get crypto with ID ${req.params.id}`})
+    const crypto = await Crypto.findById(req.params.id)
+
+    if(!crypto) {
+        res.status(400)
+        throw new Error ('Crypto not found')
+    }
+    res.status(200).json(crypto)
 })
 
 //PUT crypto
 //@route PUT /api/routes/:id
-//@access Private
 const updateCrypto = asyncHandler(async (req, res) => {
-    res.status(200).json({message: `Update crypto with ID ${req.params.id}`})
+    const crypto = await Crypto.findById(req.params.id)
+
+    if(!crypto) {
+        res.status(400)
+        throw new Error ('Crypto not found')
+    }
+    const updatedCrypto = await Crypto.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+    })
+    res.status(200).json({message: `Updated crypto with ID ${updatedCrypto}`})
 })
 
 //POST crypto
 //@route POST /api/routes
-//@access Private
 const createCrypto = asyncHandler(async (req, res) => {
-    if(req.body.text){
-        res.status(200).json({message: `Create crypto`})
-    } else {
+    
+    if(!req.body){
         res.status(400)
         throw new Error('No data found' )
     }
+
+    const newCrypto = await Crypto.create( {
+        name: req.body.name,
+        symbol: req.body.symbol,
+        priceVsGBP: req.body.priceVsGBP,
+        marketHistoryYear: req.body.marketHistoryYear,
+    })
+
+    res.status(200).json(newCrypto)
+
 })
 
 //DELETE crypto
 //@route DELETE /api/routes/:id
-//@access Private
 const deleteCrypto = asyncHandler(async (req, res) => {
-    res.status(200).json({message: `Delete crypto with ID ${req.params.id}`})
+    await Crypto.findByIdAndDelete(req.params.id)
+
+    if(!req.params.id) {
+        res.status(400)
+        throw new Error ('Crypto not found')
+    }
+
+    res.status(200).json({id: req.params.id})
 })
 
 module.exports = {
