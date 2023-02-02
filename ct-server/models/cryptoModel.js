@@ -9,18 +9,19 @@ const cryptoSchema = mongoose.Schema({
         type: String,
         required: [true, 'Required']
     },
-
     priceVsGBP: {
         type: String,
         required: [true, 'Required']
     },
-
-    marketHistoryYear: {
+    amountOwned: {
+        type: String,
+        required: [true, "Required"]
+    },
+    amountOwnedInGBP: {
         type: String,
         required: [true, "Required"]
     }
-
-}, 
+    }, 
     {
         timestamps:true,
     }

@@ -36,3 +36,58 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  padding: 5%;
+}
+
+.btnSubmit {
+  color: white;
+  background: black;
+  border: #61dafb;
+  margin-top: 2.5%;
+  transition: 0.75s;
+  padding: 1%;
+}
+
+.btnSubmit:hover {
+  color: black;
+  background: white;
+  border: white;
+  margin-top: 2.5%;
+  transition: 0.75s;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type:none;
+  margin: -5%;
+  padding: 0;
+  width: 11%;
+  background-color: black;
+  position: fixed;
+  height: 100%;
+  overflow:auto;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+  transition: 0.5s;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(224, 224, 224);
+  color: blue;
+  transition: 0.5s;
+}

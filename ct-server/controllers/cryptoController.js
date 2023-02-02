@@ -49,7 +49,8 @@ const createCrypto = asyncHandler(async (req, res) => {
         name: req.body.name,
         symbol: req.body.symbol,
         priceVsGBP: req.body.priceVsGBP,
-        marketHistoryYear: req.body.marketHistoryYear,
+        amountOwned: req.body.amountOwned,
+        amountOwnedInGBP: req.body.amountOwnedInGBP,
     })
 
     res.status(200).json(newCrypto)
@@ -69,6 +70,7 @@ const deleteCrypto = asyncHandler(async (req, res) => {
     res.status(200).json({id: req.params.id})
 })
 
+//Exports
 module.exports = {
     getCryptos, 
     getCrypto, 
