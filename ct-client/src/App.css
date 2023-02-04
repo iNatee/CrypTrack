@@ -62,22 +62,31 @@ body {
   margin: 0;
 }
 
+.menu-item-top {
+  display: block;
+  color: white;
+  text-decoration: none;
+  background-color: #282c34;
+  padding: 7.5%;
+  
+}
+
 ul {
-  list-style-type:none;
-  margin: -5%;
-  padding: 0;
-  width: 11%;
+  list-style-type: none;
   background-color: black;
   position: fixed;
   height: 100%;
+  width: 10%;
+  margin: -1.5%;
   overflow:auto;
 }
 
 li a {
   display: block;
   color: white;
-  padding: 8px 16px;
   text-decoration: none;
+  padding: 5%;
+  margin-top: 5%;
 }
 
 li a.active {
@@ -87,7 +96,7 @@ li a.active {
 }
 
 li a:hover:not(.active) {
-  background-color: rgb(224, 224, 224);
-  color: blue;
   transition: 0.5s;
+  box-shadow: 5px 5px 7.5px white;  
+  color: white;
 }

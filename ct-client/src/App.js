@@ -6,7 +6,7 @@ import Calculator from './pages/Calculator';
 import History from './pages/History';
 import Library from './pages/Library';
 import Portfolio from './pages/Portfolio';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 import '@fontsource/roboto/500.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     
     <>
     <Router>
-    <Header />
+    <Navbar />
     <div className="container">
       <Routes>
         <Route path='/' element={<Dashboard />} />
