@@ -7,6 +7,7 @@ import History from './pages/History';
 import Library from './pages/Library';
 import Portfolio from './pages/Portfolio';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import '@fontsource/roboto/500.css';
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
         <Route path='/history' element={<History />} />
         <Route path='/library' element={<Library />} />
         <Route path='/portfolio' element={<Portfolio />} />
-      </Routes>
+	  </Routes>
+	  <Footer/>
     </div>
     </Router>
     </>

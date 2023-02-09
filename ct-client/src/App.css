@@ -1,44 +1,32 @@
-.App {
-  text-align: center;
+.pg-content {
+    padding-left: 10%;
+    padding-top: 2.5%
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pg-header {
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pg-body {
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.socials {
+    
 }
 
-.App-link {
-  color: #61dafb;
+.social{
+    padding: 1%;
+    display: inline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-h1 {
-  padding: 5%;
+.pg-footer {
+    padding-left: 10%;
+    padding-top: 10%;
+    text-align: center;
 }
 
 .btnSubmit {
@@ -59,6 +47,7 @@ h1 {
 }
 
 body {
+  background-color: #282c34;
   margin: 0;
 }
 
@@ -68,17 +57,15 @@ body {
   text-decoration: none;
   background-color: #282c34;
   padding: 7.5%;
-  
 }
 
 ul {
+  padding-top: 2.5%;
   list-style-type: none;
-  background-color: black;
+  background-color: #282c34;
   position: fixed;
   height: 100%;
   width: 10%;
-  margin: -1.5%;
-  overflow:auto;
 }
 
 li a {
@@ -90,13 +77,16 @@ li a {
 }
 
 li a.active {
-  background-color: #04AA6D;
+  background-color: black;
   color: white;
   transition: 0.5s;
 }
 
 li a:hover:not(.active) {
-  transition: 0.5s;
-  box-shadow: 5px 5px 7.5px white;  
+  transition: 0.75s;
+  text-shadow: 1px 1px 10px;
   color: white;
+  
+  
 }
+

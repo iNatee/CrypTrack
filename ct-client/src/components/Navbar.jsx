@@ -15,7 +15,7 @@ function Navbar() {
                 </li>
                 <li>
                     <Link to='/'>
-                        Dashboard
+			Dashboard
                     </Link>
                 </li>
                 <li>

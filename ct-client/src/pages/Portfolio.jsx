@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -17,6 +17,7 @@ function Portfolio() {
     const onChange = () => {}
 
     return (
+	<div className="pg-content">
         <section className='heading'>
             <h1 className='cust-header'>
                 Enter your crypto info here
@@ -48,6 +49,7 @@ function Portfolio() {
                 
             </form>
         </section>
+	    </div>
     )
 }
 
